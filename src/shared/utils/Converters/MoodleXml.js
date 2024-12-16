@@ -7,20 +7,21 @@ const multiple = (question) => {
     return `<answer fraction="${value}" format="html">
     <text><![CDATA[${alternative.text}]]></text>
     <feedback format="html">
-      <text><![CDATA[<p style="text-align: justify;">${alternative.feedback || ''}</p>]]></text>
+      <text><![CDATA[<div style="text-align: justify;">${alternative.feedback || ''}</div>]]></text>
     </feedback>
   </answer>`;
   });
+  
   const xml = `
     <question type="multichoice">
       <name>
         <text>${question.title}</text>
       </name>
       <questiontext format="html">
-        <text><![CDATA[<p style="text-align: justify;">${description}</p>]]></text>
+        <text><![CDATA[<div style="text-align: justify;">${description}</div>]]></text>
       </questiontext>
       <generalfeedback format="html">
-        <text><![CDATA[<p style="text-align: justify;">${feedback}</p>]]></text>
+        <text><![CDATA[<div style="text-align: justify;">${feedback}</div>]]></text>
       </generalfeedback>
       <defaultgrade>1</defaultgrade>
       <penalty>0.3333333</penalty>
@@ -31,16 +32,16 @@ const multiple = (question) => {
       <answernumbering>abc</answernumbering>
       <showstandardinstruction>0</showstandardinstruction>
       <correctfeedback format="html">
-        <text><![CDATA[<p style="text-align: justify;">Sua resposta está correta.</p>]]></text>
+        <text><![CDATA[<div style="text-align: justify;">Sua resposta está correta.</div>]]></text>
       </correctfeedback>
       <partiallycorrectfeedback format="html">
-        <text><![CDATA[<p style="text-align: justify;">Sua resposta está parcialmente correta.</p>]]></text>
+        <text><![CDATA[<div style="text-align: justify;">Sua resposta está parcialmente correta.</div>]]></text>
       </partiallycorrectfeedback>
       <incorrectfeedback format="html">
-        <text><![CDATA[<p style="text-align: justify;">Sua resposta está incorreta.</p>]]></text>
+        <text><![CDATA[<div style="text-align: justify;">Sua resposta está incorreta.</div>]]></text>
       </incorrectfeedback>
       <shownumcorrect/>
-      ${alternativesText}
+      ${alternativesText.join('\n')}
     </question>
   `;
 
@@ -53,10 +54,10 @@ const essay = (question) => `
         <text>${question.title}</text>
       </name>
       <questiontext format="html">
-        <text><![CDATA[<p style="text-align: justify;">${question.description}</p>]]></text>
+        <text><![CDATA[<div style="text-align: justify;">${question.description}</div>]]></text>
       </questiontext>
       <generalfeedback format="html">
-        <text><![CDATA[<p style="text-align: justify;">${question.feedback}</p>]]></text>
+        <text><![CDATA[<div style="text-align: justify;">${question.feedback}</div>]]></text>
       </generalfeedback>
       <defaultgrade>1</defaultgrade>
       <penalty>0</penalty>
@@ -82,10 +83,10 @@ const trueFalse = (question) => `
       <text>${question.title}</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[<p style="text-align: justify;">${question.description}</p>]]></text>
+      <text><![CDATA[<div style="text-align: justify;">${question.description}</div>]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[<p style="text-align: justify;">${question.feedback}</p>]]></text>
+      <text><![CDATA[<div style="text-align: justify;">${question.feedback}</div>]]></text>
     </generalfeedback>
     <defaultgrade>1</defaultgrade>
     <penalty>1</penalty>
@@ -94,13 +95,13 @@ const trueFalse = (question) => `
     <answer fraction="${question.isCorrect ? 100 : 0}" format="moodle_auto_format">
       <text>true</text>
       <feedback format="html">
-        <text><![CDATA[<p style="text-align: justify;">${question.trueFeedback || ''}</p>]]></text>
+        <text><![CDATA[<div style="text-align: justify;">${question.trueFeedback || ''}</div>]]></text>
       </feedback>
     </answer>
     <answer fraction="${question.isCorrect ? 0 : 100}" format="moodle_auto_format">
       <text>false</text>
       <feedback format="html">
-        <text><![CDATA[<p style="text-align: justify;">${question.falseFeedback || ''}</p>]]></text>
+        <text><![CDATA[<div style="text-align: justify;">${question.falseFeedback || ''}</div>]] </text>
       </feedback>
     </answer>
   </question>`;
@@ -114,7 +115,7 @@ const associative = (question) => {
       <text>${item.answer}</text>
     </answer>
     <feedback format="html">
-      <text><![CDATA[<p style="text-align: justify;">${item.feedback || ''}</p>]]></text>
+      <text><![CDATA[<div style="text-align: justify;">${item.feedback || ''}</div>]]></text>
     </feedback>
   </subquestion>`
   );
@@ -124,10 +125,10 @@ const associative = (question) => {
       <text>${title}</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[<p style="text-align: justify;">${description}</p>]]></text>
+      <text><![CDATA[<div style="text-align: justify;">${description}</div>]]></text>
     </questiontext>
     <generalfeedback format="html">
-      <text><![CDATA[<p style="text-align: justify;">${feedback}</p>]]></text>
+      <text><![CDATA[<div style="text-align: justify;">${feedback}</div>]]></text>
     </generalfeedback>
     <defaultgrade>1</defaultgrade>
     <penalty>0.3333333</penalty>
@@ -135,16 +136,16 @@ const associative = (question) => {
     <idnumber></idnumber>
     <shuffleanswers>true</shuffleanswers>
     <correctfeedback format="html">
-      <text><![CDATA[<p style="text-align: justify;">Sua resposta está correta.</p>]]></text>
+      <text><![CDATA[<div style="text-align: justify;">Sua resposta está correta.</div>]]></text>
     </correctfeedback>
     <partiallycorrectfeedback format="html">
-      <text><![CDATA[<p style="text-align: justify;">Sua resposta está parcialmente correta.</p>]]></text>
+      <text><![CDATA[<div style="text-align: justify;">Sua resposta está parcialmente correta.</div>]]></text>
     </partiallycorrectfeedback>
     <incorrectfeedback format="html">
-      <text><![CDATA[<p style="text-align: justify;">Sua resposta está incorreta.</p>]]></text>
+      <text><![CDATA[<div style="text-align: justify;">Sua resposta está incorreta.</div>]]></text>
     </incorrectfeedback>
     <shownumcorrect/>
-      ${alternativesText}
+      ${alternativesText.join('\n')}
     </question>
   `;
 
