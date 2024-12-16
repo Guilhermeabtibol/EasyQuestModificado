@@ -7,7 +7,7 @@ const multiple = (question) => {
     return `<answer fraction="${value}" format="html">
     <text><![CDATA[${alternative.text}]]></text>
     <feedback format="html">
-      <text></text>
+      <text><![CDATA[<p style="text-align: justify;">${alternative.feedback || ''}</p>]]></text>
     </feedback>
   </answer>`;
   });
@@ -94,13 +94,13 @@ const trueFalse = (question) => `
     <answer fraction="${question.isCorrect ? 100 : 0}" format="moodle_auto_format">
       <text>true</text>
       <feedback format="html">
-        <text></text>
+        <text><![CDATA[<p style="text-align: justify;">${question.trueFeedback || ''}</p>]]></text>
       </feedback>
     </answer>
     <answer fraction="${question.isCorrect ? 0 : 100}" format="moodle_auto_format">
       <text>false</text>
       <feedback format="html">
-        <text></text>
+        <text><![CDATA[<p style="text-align: justify;">${question.falseFeedback || ''}</p>]]></text>
       </feedback>
     </answer>
   </question>`;
@@ -113,6 +113,9 @@ const associative = (question) => {
     <answer>
       <text>${item.answer}</text>
     </answer>
+    <feedback format="html">
+      <text><![CDATA[<p style="text-align: justify;">${item.feedback || ''}</p>]]></text>
+    </feedback>
   </subquestion>`
   );
   const xml = `
@@ -158,7 +161,6 @@ const convertByType = (question) => {
       return trueFalse(question);
     case questionType.associative.constant:
       return associative(question);
-
     default:
       throw new Error('Not implemented');
   }
