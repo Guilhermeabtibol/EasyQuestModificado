@@ -6,8 +6,8 @@ export const components = {
 };
 
 export const questionRules = {
-  minimumAlternatives: 2,
-  minimumItems: 2,
+  minimumAlternatives: 1,
+  minimumItems: 1,
 };
 
 export const MAX_ALTERNATIVES = 7;
