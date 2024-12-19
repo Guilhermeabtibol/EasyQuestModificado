@@ -5,6 +5,7 @@ export const TEAL_BLUE = '#044C54';
 export const COD_GRAY = '#0A0A0A';
 export const WHITE = '#FFF';
 export const AZUL = '#1B5CB5';
+export const VERMELHO = '#DF0909';
 
 export default {
   typography: {
