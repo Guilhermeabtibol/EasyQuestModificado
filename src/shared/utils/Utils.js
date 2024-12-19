@@ -12,6 +12,8 @@ export const NumberToLetter = (number) => {
       return 'E';
     case 5:
       return 'F';
+    case 6:
+      return 'G';
     default:
       return '';
   }
