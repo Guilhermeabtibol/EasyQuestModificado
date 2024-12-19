@@ -10,7 +10,8 @@ export const NumberToLetter = (number) => {
       return 'D';
     case 4:
       return 'E';
-
+    case 5:
+      return 'F';
     default:
       return '';
   }
