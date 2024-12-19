@@ -6,13 +6,13 @@ export const components = {
 };
 
 export const questionRules = {
-  minimumAlternatives: 2,
-  minimumItems: 2,
+  minimumAlternatives: 1,
+  minimumItems: 1,
 };
 
-export const MAX_ALTERNATIVES = 5;
+export const MAX_ALTERNATIVES = 6;
 
-export const MAX_ITEMS = 5;
+export const MAX_ITEMS = 6;
 
 export const questionType = {
   descritive: { value: 'questionType.descritive', constant: 'DESCRITIVE' },

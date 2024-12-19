@@ -11,7 +11,6 @@ const multiple = (question) => {
     </feedback>
   </answer>`;
   });
-  
   const xml = `
     <question type="multichoice">
       <name>
