@@ -3,7 +3,7 @@ import { Grid, Typography, makeStyles } from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
 import HelpIcon from '@material-ui/icons/Help';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import { BONDI_BLUE, COD_GRAY, WHITE } from '../../theme';
+import { AZUL, BONDI_BLUE, COD_GRAY, WHITE } from '../../theme';
 import HelpModal from './HelpModal';
 import textConstants from '../translations/textConstants';
 
@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     zIndex: '1002',
     width: '100%',
     height: '70px',
-    backgroundColor: BONDI_BLUE,
+    backgroundColor: AZUL,
     borderBottom: `3px solid ${COD_GRAY}`,
     boxSizing: 'border-box',
     display: 'flex',

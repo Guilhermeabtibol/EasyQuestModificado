@@ -4,6 +4,7 @@ export const ZIGGURAT = '#C2E0DF';
 export const TEAL_BLUE = '#044C54';
 export const COD_GRAY = '#0A0A0A';
 export const WHITE = '#FFF';
+export const AZUL = '#1B5CB5';
 
 export default {
   typography: {
