@@ -1,12 +1,12 @@
 import React from 'react';
 import { Grid, makeStyles } from '@material-ui/core';
-import { WHITE } from '../../theme';
+import { VERMELHO, WHITE } from '../../theme';
 
 const useStyles = makeStyles({
   divider: {
     width: '4px',
     height: '90%',
-    backgroundColor: WHITE,
+    backgroundColor: VERMELHO,
     margin: '0 8px',
   },
 });
