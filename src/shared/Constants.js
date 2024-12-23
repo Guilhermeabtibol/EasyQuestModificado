@@ -10,9 +10,9 @@ export const questionRules = {
   minimumItems: 1,
 };
 
-export const MAX_ALTERNATIVES = 7;
+export const MAX_ALTERNATIVES = 8;
 
-export const MAX_ITEMS = 7;
+export const MAX_ITEMS = 8;
 
 export const questionType = {
   descritive: { value: 'questionType.descritive', constant: 'DESCRITIVE' },
