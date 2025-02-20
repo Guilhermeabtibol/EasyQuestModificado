@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# EasyQuest Modificado
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O **EasyQuest Modificado** é uma versão personalizada do sistema EasyQuest, projetado para facilitar a criação e gerenciamento de questionários e quizzes.
 
-## Available Scripts
+## Tecnologias Utilizadas
+- **Node.js**
+- **Express.js**
+- **MongoDB**
+- **React.js** (se aplicável)
+- **Bootstrap** para estilização
 
-In the project directory, you can run:
+## Funcionalidades
+- **Criação e edição de questionários**
+- **Gerenciamento de perguntas e respostas**
+- **Sistema de autenticação de usuários**
+- **Armazenamento de dados no MongoDB**
+- **Interface responsiva para melhor usabilidade**
 
-### `yarn start`
+## Requisitos
+Antes de rodar o projeto, certifique-se de ter instalado:
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Instalação e Configuração
+1. Clone este repositório:
+   ```sh
+   git clone https://github.com/Guilhermeabtibol/EasyQuestModificado.git
+   ```
+2. Acesse o diretório do projeto:
+   ```sh
+   cd EasyQuestModificado
+   ```
+3. Instale as dependências:
+   ```sh
+   yarn install
+   ```
+4. Configure as variáveis de ambiente no arquivo `.env`:
+   ```env
+   MONGO_URI=seu_mongo_uri
+   JWT_SECRET=sua_chave_secreta
+   ```
+5. Inicie o servidor:
+   ```sh
+   yarn start
+   ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Uso
+O sistema estará disponível em `http://localhost:3000`. Utilize um navegador ou ferramentas como Postman para testar as funcionalidades.
 
-### `yarn test`
+## Contribuição
+Contribuições são bem-vindas! Para contribuir:
+1. Faça um fork do repositório
+2. Crie uma nova branch: `git checkout -b minha-feature`
+3. Faça suas alterações e commit: `git commit -m 'Adicionando nova funcionalidade'`
+4. Envie as mudanças: `git push origin minha-feature`
+5. Abra um Pull Request
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contato
+Caso tenha dúvidas ou precise de suporte, entre em contato:
+📧 Email: guiabtibol@gmail.com
 
-### `yarn build`
+## Licença
+Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
